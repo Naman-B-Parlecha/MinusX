@@ -7,9 +7,13 @@ import (
 )
 
 func SetupRoutes(r *gin.Engine, db *sql.DB) {
-
 	authGroup := r.Group("/auth")
 	{
 		AuthRoutes(authGroup, db)
+	}
+
+	postGroup := r.Group("/posts")
+	{
+		PostRoutes(postGroup, db)
 	}
 }
