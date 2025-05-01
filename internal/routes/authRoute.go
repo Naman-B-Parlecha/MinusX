@@ -12,9 +12,6 @@ func AuthRoutes(r *gin.RouterGroup, db *sql.DB) {
 	authService := services.NewAuthService(db)
 	authHandler := handlers.NewAuthHandler(authService)
 
-	authGroup := r.Group("/auth")
-	{
-		authGroup.POST("/register", authHandler.Register)
-	}
-
+	r.POST("/register", authHandler.Register)
+	r.POST("/login", authHandler.Login)
 }
