@@ -4,20 +4,18 @@
 
 ### Authentication
 - [x] Login
-- [ ] Register
-- [ ] Logout
-- [ ] Token Refresh
+- [x] Register
 
 ### Security
-- [ ] Authentication Middleware
+- [x] Authentication Middleware
 
 ### Blog Management
-- [ ] Create Blog
-- [ ] Update Blog
-- [ ] Get Blog by ID
-- [ ] Get All Blogs
-- [ ] Delete Blog
-- [ ] Analytics (View Counter)
+- [x] Create Blog
+- [x] Update Blog
+- [x] Get Blog by ID
+- [x] Get All Blogs
+- [x] Delete Blog
+- [x] Analytics (View Counter)
 
 ### Comment System
 - [ ] Create Comment

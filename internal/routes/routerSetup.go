@@ -16,4 +16,9 @@ func SetupRoutes(r *gin.Engine, db *sql.DB) {
 	{
 		PostRoutes(postGroup, db)
 	}
+
+	commentGroup := r.Group("/comments")
+	{
+		CommentRoutes(commentGroup, db)
+	}
 }
