@@ -13,6 +13,8 @@ FROM alpine:latest
     
 WORKDIR /app
     
+RUN apk --no-cache add curl
+    
 COPY --from=builder /app/minusx .
     
 RUN chmod +x minusx
@@ -20,4 +22,3 @@ RUN chmod +x minusx
 EXPOSE 8081
     
 ENTRYPOINT ["./minusx"]
-    

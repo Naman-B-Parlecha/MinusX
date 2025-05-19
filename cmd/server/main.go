@@ -9,6 +9,7 @@ import (
 )
 
 func main() {
+	gin.SetMode(gin.ReleaseMode)
 	db, err := db.ConnectDb()
 	if err != nil {
 		fmt.Println("Error connecting to the database:", err)

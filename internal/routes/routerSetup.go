@@ -7,6 +7,16 @@ import (
 )
 
 func SetupRoutes(r *gin.Engine, db *sql.DB) {
+	r.GET("/", func(c *gin.Context) {
+		c.JSON(200, gin.H{
+			"message": "Welcome to MinusX API",
+		})
+	})
+	r.GET("health", func(c *gin.Context) {
+		c.JSON(200, gin.H{
+			"status": "sax sux",
+		})
+	})
 	authGroup := r.Group("/auth")
 	{
 		AuthRoutes(authGroup, db)
